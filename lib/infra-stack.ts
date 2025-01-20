@@ -17,7 +17,7 @@ export class InfraStack extends cdk.Stack {
     const demolambda = new lambda.Function(this, 'demolambdaid',{
       handler: 'lambda_function.lambda_handler',
       runtime: lambda.Runtime.PYTHON_3_9,
-      code:  lambda.Code.fromAsset('../services/'),
+      code:  lambda.Code.fromAsset('services/'),
       functionName:  'democdklambda'
     });
   }

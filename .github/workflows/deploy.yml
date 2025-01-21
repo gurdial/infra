@@ -19,6 +19,7 @@ jobs:
           echo input enviornment =  ${{ inputs.environment }}
           echo AWS_REGION = ${{ env.ENVIRONMENT_NAME }}
           echo AWS_REGION = ${{ env.AWS_REGION }}
+          echo AWS_REGION = ${{ secrets.AWS_REGION }}
           echo AWS_REGION from repo = ${{ vars.AWS_REGION }}
       - name: Git clone the repository
         uses: actions/checkout@v3

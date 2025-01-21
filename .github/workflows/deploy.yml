@@ -61,4 +61,4 @@ jobs:
           export CDK_DEFAULT_ACCOUNT=$(aws sts get-caller-identity | jq -r '.Account')
           npx cdk deploy --require-approval never
         env:
-          AWS_REGION: ${{ vars.AWS_GITHUB_ROLE }}
+          AWS_REGION: ${{ vars.AWS_REGION }}

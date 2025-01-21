@@ -16,12 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - name: print variables
-        run: |
-          echo input enviornment =  ${{ inputs.environment }}
-          echo AWS_REGION = ${{ vars.ENVIRONMENT_NAME }}
-          echo AWS_REGION = ${{ vars.AWS_REGION }}          
-          echo AWS_REGION from repo = ${{ vars.AWS_REGION }}
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: configure aws credentials
